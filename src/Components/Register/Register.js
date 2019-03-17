@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import api from './api-controller'
+import { Button } from 'semantic-ui-react';
+import userRequests from '../Controllers/UserRequests';
 
 class Register extends Component {
 
@@ -19,7 +20,7 @@ class Register extends Component {
 
     registerUser = (e) => {
         e.preventDefault()
-        api.registerUser(this.state.email, this.state.firstName, this.state.lastName, this.state.password).then(res => console.log(res))
+        userRequests.registerUser(this.state.email, this.state.firstName, this.state.lastName, this.state.password).then(res => console.log(res))
     }
 
     render() {
@@ -30,7 +31,7 @@ class Register extends Component {
                     <input onChange={this.handleFieldChange} id="firstName" type="text" placeholder="First Name"></input>
                     <input onChange={this.handleFieldChange} id="lastName" type="text" placeholder="Last Name"></input>
                     <input onChange={this.handleFieldChange} id="password" type="password" placeholder="password"></input>
-                    <button>Register</button>
+                    <Button primary>Register</Button>
                 </form>
             </div>
         );

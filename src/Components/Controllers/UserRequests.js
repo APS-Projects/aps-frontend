@@ -1,6 +1,6 @@
 const url = 'http://localhost:5000'
 
-class Api {
+class UserRequests {
 
     registerUser = (email, firstName, lastName, password) => {
         return fetch(`${url}/api/token`, {
@@ -43,5 +43,5 @@ class Api {
 
 }
 
-const api = new Api()
-export default api
+const userRequests = new UserRequests()
+export default userRequests

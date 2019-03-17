@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { Container } from 'semantic-ui-react';
+import Register from './Components/Register/Register.js';
 import './App.css';
 
 class App extends Component {
@@ -7,7 +9,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>APP BITCH</h1>
+        <BrowserRouter>
+          <Container>
+            <Switch>
+              <Route path='/' component={Register} />
+            </Switch>
+          </Container>
+        </BrowserRouter>
       </div>
     );
   }

@@ -5,12 +5,12 @@
 const intialUserState = {
     userInfo: {        
         email: "wiec1369@gmail.com",
-        firstName: "",
-        lastName: "",
-        password: ""
+        firstName: "Adam",
+        lastName: "Wieckert",
+        password: "adam"
     },
-    accessToken: ""
-};                                          
+    accessToken: "dkdfYncHDKAMCncks123"
+};                                         
 
 function registerReducer(state = intialUserState, action) {
     return state;

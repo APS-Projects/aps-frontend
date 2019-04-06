@@ -13,6 +13,11 @@ const intialUserState = {
 };                                         
 
 function registerReducer(state = intialUserState, action) {
+    switch (action.type) {
+        case "UPDATE_USER_EMAIL":
+        return Object.assign({}, ...state, );
+    }
+
     return state;
 }
 

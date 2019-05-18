@@ -2,14 +2,14 @@
 
 //1. The action (info about what happened)
 //2. copy of the current state
-const intialUserState = {
-    userInfo: {        
-        email: "wiec1369@gmail.com",
-        firstName: "Adam",
-        lastName: "Wieckert",
-        password: "adam",
-        accessToken: "dkdfYncHDKAMCncks123"
-    }
+
+
+const initialUserState = {        
+    email: "wiec1369@gmail.com",
+    firstName: "Adam",
+    lastName: "Wieckert",
+    password: "adam",
+    accessToken: "dkdfYncHDKAMCncks123"
 };
 
 function updateEmailReducer(state, action) {
@@ -21,7 +21,7 @@ function updateEmailReducer(state, action) {
     }
 }
 
-function registerReducer(state = intialUserState, action) {
+function registerReducer(state = initialUserState, action) {
     switch (action.type) {
         case "UPDATE_USER_EMAIL":
             return Object.assign({}, ...state, { email: updateEmailReducer(state.userInfo.email, action)});

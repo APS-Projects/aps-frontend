@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
-import userRequests from '../Controllers/UserRequests';
+import userRequests from '../ApiRequests/UserRequests';
 
 class Register extends Component {
 

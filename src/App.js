@@ -11,15 +11,15 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Provider store={store}>
-          <Router>
-            <Container>
-              <Switch>
-                <Route path='/' component={ReduxRegister} />
-              </Switch>
-            </Container>
-          </Router>
-        </Provider>
+          <Provider store={store}>
+            <Router>
+              <Container>
+                <Switch>
+                  <Route path='/' component={ReduxRegister} />
+                </Switch>
+              </Container>
+            </Router>
+          </Provider>
       </div>
     );
   }

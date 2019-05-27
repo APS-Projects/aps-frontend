@@ -13,8 +13,6 @@ function mapDispatchToProps(dispatch) {
     return bindActionCreators(registerActions, dispatch);
 }
 
-
-
 const ReduxRegister = connect(mapStateToProps, mapDispatchToProps)(Register);
 
 export default ReduxRegister;

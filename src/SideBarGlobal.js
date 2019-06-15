@@ -1,27 +1,23 @@
 import React, { Component } from 'react';
 import { Button, Icon, Menu, Segment, Sidebar } from 'semantic-ui-react';
 import App from './App';
+import './SideBarGlobal.scss';
 
 export default class SideBarGlobal extends Component {
   state = { visible: false }
 
-  handleHideClick = () => this.setState({ visible: false })
-  handleShowClick = () => this.setState({ visible: true })
   handleSidebarHide = () => this.setState({ visible: false })
+
+  handleSidebarState = () => this.setState({ visible: !this.state.visible });
 
   render() {
     const { visible } = this.state
 
     return (
       <div>
-        <Button.Group>
-          <Button disabled={visible} onClick={this.handleShowClick}>
-            Show sidebar
+          <Button disabled={visible} onClick={this.handleSidebarState}>
+            <Icon name="sidebar"/>
           </Button>
-          <Button disabled={!visible} onClick={this.handleHideClick}>
-            Hide sidebar
-          </Button>
-        </Button.Group>
 
         <Sidebar.Pushable as={Segment}>
           <Sidebar

@@ -26,7 +26,7 @@ class Register extends Component {
 
     render() {
         return (
-            <div className="App">
+            <div>
                 <form className="test" onSubmit={this.registerUser}>
                     <input className="my-test" onChange={this.handleFieldChange} id="email" type="email" placeholder="email"></input>
                     <input onChange={this.handleFieldChange} id="firstName" type="text" placeholder="First Name"></input>

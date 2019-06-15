@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import userRequests from '../ApiRequests/UserRequests';
+import './Register.scss';
 
 class Register extends Component {
 
@@ -26,8 +27,8 @@ class Register extends Component {
     render() {
         return (
             <div className="App">
-                <form onSubmit={this.registerUser}>
-                    <input onChange={this.handleFieldChange} id="email" type="email" placeholder="email"></input>
+                <form className="test" onSubmit={this.registerUser}>
+                    <input className="my-test" onChange={this.handleFieldChange} id="email" type="email" placeholder="email"></input>
                     <input onChange={this.handleFieldChange} id="firstName" type="text" placeholder="First Name"></input>
                     <input onChange={this.handleFieldChange} id="lastName" type="text" placeholder="Last Name"></input>
                     <input onChange={this.handleFieldChange} id="password" type="password" placeholder="password"></input>
